@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+        <%-- css--%>
+    <link href="Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="Datatable/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Fontawsom/css/all.css" rel="stylesheet" />
+    <link href="Bootstrap/starcss.css" rel="stylesheet" />
+    <link href="Navbar.css" rel="stylesheet" />
+  
+    <%--js--%>
+  
+    <script src="Datatable/jquery-3.5.1.min.js"></script>
+    <script src="Bootstrap/jquery-ui.js"></script>
+    <script src="Bootstrap/jquery-ui.min.js"></script>
+    <script src="Bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="Datatable/jquery.dataTables.min.js"></script>
+      
+    <script src="Navbar.js"></script>
+
+
+
+
+
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+         <!-- Navbar-->
+     
+       <header class="header">
+            
+           <h1 class="logo text-dark">Car<span>.</span></h1>
+            <div class="menuToggle" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><asp:LinkButton style="color:deeppink !important" class="rounded" href="Home.aspx" ID="Home" runat="server">Home</asp:LinkButton></li>
+                <li><asp:LinkButton style="color:deeppink !important" class="rounded" href="Carcompare.aspx" ID="Compare" runat="server">Compare</asp:LinkButton></li>
+                <li><asp:LinkButton  href="PricePrediction.aspx" class="rounded" style="color:deeppink !important"  ID="Price" runat="server">Price Prediction</asp:LinkButton></li>
+                <li><asp:LinkButton  href="Acc.aspx" class="rounded" style="color:deeppink !important"  ID="Accessories" runat="server">Accessories</asp:LinkButton></li>
+                 <li><asp:LinkButton style="color:deeppink !important" class="rounded"  href="EnquireForm.aspx" ID="EnquireForm" runat="server">Enquireform</asp:LinkButton></li>
+                <li><asp:LinkButton  href="admin_home.aspx" class="rounded" style="color:deeppink !important"  ID="Admin" runat="server" Visible="False">Admin Console</asp:LinkButton></li>
+                <li><asp:LinkButton style="color:deeppink !important" class="rounded"  href="Signup.aspx" ID="Signup" runat="server">Signup</asp:LinkButton></li>
+                <li><asp:LinkButton href="Login.aspx" style="color:deeppink !important" ID="Login" runat="server">Login</asp:LinkButton></li>
+                 <li><asp:LinkButton style="color:deeppink !important" ID="Logout" runat="server" Visible="False" OnClick="Logout_Click">Logout</asp:LinkButton></li>
+            </ul>
+                
+            
+        </header> 
+     
+<!-- Navbar-->
+        
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        
+        <!--footer-->
+        <div class=" copyrightText   ">
+                    
+                        <p>CopyrightText 2020 <a href="#">Saurabh</a>. All Right Reserved.</p>
+                </div>
+        <!--footer-->
+        
+    </form>
+    
+</body>
+</html>
